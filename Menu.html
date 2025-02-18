@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu-Salsas El Viejon</title>
+    <title>Salsas El Viejón</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.webp">
+    <!-- Aquí llamamos al archivo CSS externo -->
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
+    <!-- Header -->
+    <header class="header">
+        <img src="images/Logo.webp" alt="Logo" class="logo">
         <nav>
-            <ul>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#nosotros">Sobre Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <ul class="nav-list">
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#NuestroProducto">Nuestro producto</a></li>
+                <li><a href="#QuienesSomos">Quiénes somos</a></li>
+                <li><a href="#Opiniones">Opiniones</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
             </ul>
         </nav>
-        <div>
-            <img src="Logo.webp" alt="Logo de la empresa" class="logo">
-            <h1>Salsas Del Viejon</h1>
-        </div>
+        <button class="buy-now-button">Comprar Ahora</button>
     </header>
 
-    <section id="productos">
-        <h2>Productos</h2>
-        <h3>Salsa de Chiltepin del Viejon (125ml, 15 Piezas)</h3>    
-        <h3>Salsa de Chiltepin del Viejon (125ml, 3 Piezas)</h3>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/fondo-web.webp" alt="Salsas El Viejón" class="hero-img">
+        <div class="hero-content">
+            <h1>¡Sabor auténtico en cada gota!</h1>
+            <p>Descubre la intensidad y el sabor único de nuestras salsas artesanales.</p>
+            <button class="cta-button">Ordena ahora</button>
+        </div>
     </section>
 
-    <section id="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>México es un país con una gran diversidad cultural, de ecosistemas, pero sobre todo de comida. Hay miles de tipos de tacos, miles de tipos de salsas, miles de tipos de condimentos que en cada parte del país se les da diferente uso. Los estilos de cocina que hay desde Yucatán hasta Tijuana son infinitos, cada quién se encarga de poner su granito de arena.</p>
-        <p>“La apreciación que existe por la comida hoy en día, es algo muy importante para nosotros al momento de hacer nuestros productos. Nos motiva a crear el mejor producto posible.”</p>
+    <!-- Sección de Quiénes Somos -->
+    <section class="about-us" id="QuienesSomos">
+        <h2>¿Quiénes Somos?</h2>
+        <div class="about-content">
+            <img src="images/equipo.webp" alt="Equipo Salsas El Viejón" class="about-img">
+            <div class="about-text">
+                <p>México es un país con una gran diversidad cultural, de ecosistemas, pero sobre todo de comida. Hay miles de tipos de tacos, miles de tipos de salsas, miles de tipos de condimentos que en cada parte del país se les da diferente uso. Los estilos de cocina que hay desde Yucatán hasta Tijuana son infinitos, cada quién se encarga de poner su granito de arena.</p>
+                <blockquote>“La apreciación que existe por la comida hoy en día, es algo muy importante para nosotros al momento de hacer nuestros productos. Nos motiva a crear el mejor producto posible.”</blockquote>
+                <p>Sonora, como es bien sabido, es el segundo estado más grande del país, y debido a eso su diversidad de ecosistemas es muy amplia. Esto crea una gran variedad de platillos y formas de cocinar; desde mariscos, hasta unos deliciosos tacos de carne asada, desde un asador en tu patio, hasta restaurantes Gourmet. Aquí hay para todos, exigentes o no, a dieta o no, veganos o amantes de la carne.</p>
+                <p>Del Viejón es una línea orgullosamente Sonorense, ubicada en el corazón de Cd. Obregón que tiene un sólo propósito: poner la cocina Sonorense en las mesas de todo México. Nuestro principal enfoque son las famosas carnes asadas, y queremos ser el complemento perfecto para tus experiencias. Utilizamos los mejores ingredientes recién traídos de nuestras tierras (100% orgánicos) e implementamos las mejores prácticas para dejar el menor impacto ambiental posible.</p>
+                <blockquote>“El consumidor no sólo está enfocado en el producto, también importa mucho la historia qué hay detrás de cada marca, es ahí donde creas una verdadera conexión con tus clientes.”</blockquote>
+                <p>Empezamos este viaje en Noviembre de 2017, logrando posicionarnos en importantes cadenas comerciales como Walmart y Superama, a través de ellos, pudimos llegar a miles de hogares a lo largo y ancho del país y al ver la increíble respuesta de nuestros clientes, decidimos también abrir nuestro propio changarro.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Correo: <a href="mailto:contacto@salsasdelviejon.com">contacto@salsasdelviejon.com</a></p>
+    <section class="contact" id="Contacto">
+    <div class="form">
+            <form action="DatosFomulario"  method="post">
+            <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name" />
+                </li>
+                <li>
+                    <label for="mail">Correo:</label>
+                    <input type="email" id="mail" name="user_mail"/>
+                </li>
+                <li>
+                    <label for="msg">Mensaje</label>
+                    <textarea name="msg" id="user_message"></textarea>
+                </li>
+                <li class="button">
+                    <button type="submit">Envíe su mensaje</button>
+                  </li>
+                  
+            </ul>
+        </form>
+    </div>
     </section>
 </body>
-
 </html>
