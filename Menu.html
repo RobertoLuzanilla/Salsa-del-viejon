@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Salsas El Viejón</title>
@@ -7,6 +8,7 @@
     <!-- Aquí llamamos al archivo CSS externo -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -25,7 +27,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="images/fondo-web.webp" alt="Salsas El Viejón" class="hero-img">
+        <img src="images/Foto1.jpg" alt="Salsas El Viejón" class="hero-img">
         <div class="hero-content">
             <h1>¡Sabor auténtico en cada gota!</h1>
             <p>Descubre la intensidad y el sabor único de nuestras salsas artesanales.</p>
@@ -33,45 +35,103 @@
         </div>
     </section>
 
-    <!-- Sección de Quiénes Somos -->
+    <!-- Sección Nuestro Producto -->
+    <section class="our-product" id="NuestroProducto">
+        <h2>Nuestro Producto</h2>
+        <div class="product-content">
+            <img src="images/Foto2.jpg" alt="Salsa El Viejón" class="product-img">
+            <div class="product-text">
+                <p>En Salsas El Viejón, creamos salsas artesanales con ingredientes 100% naturales y seleccionados
+                    cuidadosamente para garantizar el mejor sabor en cada gota. Nuestra receta ha sido perfeccionada con
+                    el tiempo, asegurando un balance perfecto entre picor, sabor y calidad.</p>
+                <ul>
+                    <li><strong>Ingredientes Naturales:</strong> Chiles seleccionados, especias frescas y sin
+                        conservadores artificiales.</li>
+                    <li><strong>El Toque Perfecto:</strong> Ideal para carnes asadas, tacos, mariscos y cualquier
+                        platillo que necesite un extra de sabor.</li>
+                    <li><strong>Hecho en Sonora:</strong> Un producto orgullosamente sonorense, elaborado con pasión y
+                        tradición.</li>
+                </ul>
+                <p>Prueba nuestras salsas y lleva a casa el auténtico sabor del norte.</p>
+
+                <!-- Contenedor de botones para agregar al carrito -->
+                <div class="cart-controls">
+                    <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+                    <span id="product-quantity">1</span>
+                    <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+                </div>
+                <button class="add-to-cart-button">🛒 Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let quantity = 1;
+
+        function updateQuantity(change) {
+            quantity += change;
+            if (quantity < 1) quantity = 1; //esto permite que no pueda ser menor que cero
+            document.getElementById('product-quantity').textContent = quantity;
+        }
+    </script>
+
+
+
+    <section class="contact" id="Contacto">
+        <div class="form">
+            <form action="DatosFomulario" method="post">
+                <h2>Contáctanos</h2>
+                <ul>
+                    <li>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">Correo:</label>
+                        <input type="email" id="mail" name="user_mail" />
+                    </li>
+                    <li>
+                        <label for="msg">Mensaje</label>
+                        <textarea name="msg" id="user_message"></textarea>
+                    </li>
+                    <li class="button">
+                        <button type="submit">Envíe su mensaje</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </section>
+
     <section class="about-us" id="QuienesSomos">
         <h2>¿Quiénes Somos?</h2>
         <div class="about-content">
             <img src="images/equipo.webp" alt="Equipo Salsas El Viejón" class="about-img">
             <div class="about-text">
-                <p>México es un país con una gran diversidad cultural, de ecosistemas, pero sobre todo de comida. Hay miles de tipos de tacos, miles de tipos de salsas, miles de tipos de condimentos que en cada parte del país se les da diferente uso. Los estilos de cocina que hay desde Yucatán hasta Tijuana son infinitos, cada quién se encarga de poner su granito de arena.</p>
-                <blockquote>“La apreciación que existe por la comida hoy en día, es algo muy importante para nosotros al momento de hacer nuestros productos. Nos motiva a crear el mejor producto posible.”</blockquote>
-                <p>Sonora, como es bien sabido, es el segundo estado más grande del país, y debido a eso su diversidad de ecosistemas es muy amplia. Esto crea una gran variedad de platillos y formas de cocinar; desde mariscos, hasta unos deliciosos tacos de carne asada, desde un asador en tu patio, hasta restaurantes Gourmet. Aquí hay para todos, exigentes o no, a dieta o no, veganos o amantes de la carne.</p>
-                <p>Del Viejón es una línea orgullosamente Sonorense, ubicada en el corazón de Cd. Obregón que tiene un sólo propósito: poner la cocina Sonorense en las mesas de todo México. Nuestro principal enfoque son las famosas carnes asadas, y queremos ser el complemento perfecto para tus experiencias. Utilizamos los mejores ingredientes recién traídos de nuestras tierras (100% orgánicos) e implementamos las mejores prácticas para dejar el menor impacto ambiental posible.</p>
-                <blockquote>“El consumidor no sólo está enfocado en el producto, también importa mucho la historia qué hay detrás de cada marca, es ahí donde creas una verdadera conexión con tus clientes.”</blockquote>
-                <p>Empezamos este viaje en Noviembre de 2017, logrando posicionarnos en importantes cadenas comerciales como Walmart y Superama, a través de ellos, pudimos llegar a miles de hogares a lo largo y ancho del país y al ver la increíble respuesta de nuestros clientes, decidimos también abrir nuestro propio changarro.</p>
+                <p>México es un país con una gran diversidad cultural, de ecosistemas, pero sobre todo de comida. Hay
+                    miles de tipos de tacos, miles de tipos de salsas, miles de tipos de condimentos que en cada parte
+                    del país se les da diferente uso. Los estilos de cocina que hay desde Yucatán hasta Tijuana son
+                    infinitos, cada quién se encarga de poner su granito de arena.</p>
+                <blockquote>“La apreciación que existe por la comida hoy en día, es algo muy importante para nosotros al
+                    momento de hacer nuestros productos. Nos motiva a crear el mejor producto posible.”</blockquote>
+                <p>Sonora, como es bien sabido, es el segundo estado más grande del país, y debido a eso su diversidad
+                    de ecosistemas es muy amplia. Esto crea una gran variedad de platillos y formas de cocinar; desde
+                    mariscos, hasta unos deliciosos tacos de carne asada, desde un asador en tu patio, hasta
+                    restaurantes Gourmet. Aquí hay para todos, exigentes o no, a dieta o no, veganos o amantes de la
+                    carne.</p>
+                <p>Del Viejón es una línea orgullosamente Sonorense, ubicada en el corazón de Cd. Obregón que tiene un
+                    sólo propósito: poner la cocina Sonorense en las mesas de todo México. Nuestro principal enfoque son
+                    las famosas carnes asadas, y queremos ser el complemento perfecto para tus experiencias. Utilizamos
+                    los mejores ingredientes recién traídos de nuestras tierras (100% orgánicos) e implementamos las
+                    mejores prácticas para dejar el menor impacto ambiental posible.</p>
+                <blockquote>“El consumidor no sólo está enfocado en el producto, también importa mucho la historia qué
+                    hay detrás de cada marca, es ahí donde creas una verdadera conexión con tus clientes.”</blockquote>
+                <p>Empezamos este viaje en Noviembre de 2017, logrando posicionarnos en importantes cadenas comerciales
+                    como Walmart y Superama, a través de ellos, pudimos llegar a miles de hogares a lo largo y ancho del
+                    país y al ver la increíble respuesta de nuestros clientes, decidimos también abrir nuestro propio
+                    changarro.</p>
             </div>
         </div>
     </section>
-
-    <section class="contact" id="Contacto">
-    <div class="form">
-            <form action="DatosFomulario"  method="post">
-            <ul>
-                <li>
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="user_name" />
-                </li>
-                <li>
-                    <label for="mail">Correo:</label>
-                    <input type="email" id="mail" name="user_mail"/>
-                </li>
-                <li>
-                    <label for="msg">Mensaje</label>
-                    <textarea name="msg" id="user_message"></textarea>
-                </li>
-                <li class="button">
-                    <button type="submit">Envíe su mensaje</button>
-                  </li>
-                  
-            </ul>
-        </form>
-    </div>
-    </section>
 </body>
+
 </html>
