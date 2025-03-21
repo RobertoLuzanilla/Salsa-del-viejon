@@ -171,14 +171,15 @@ ul {
 
 blockquote {
     font-style: italic;
-    color: #ffbd86;
-    background: #fff7f0;
+    color: #b30000; /* Rojo intenso para el texto */
+    background: #ffcc00; /* Amarillo suave para el fondo */
     padding: 10px 20px;
-    border-left: 4px solid #faf27e;
+    border-left: 4px solid #ff6600; /* Rojo más fuerte para el borde izquierdo */
     margin: 20px 0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Our Product Section */
 .our-product {
@@ -369,7 +370,7 @@ button:hover {
 }
 
 .quantity-btn {
-    background-color: #ff5722;
+    background-color: #ff6600; /* Rojo similar al de los otros botones */
     color: white;
     border: none;
     width: 40px;
@@ -384,8 +385,9 @@ button:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+
 .quantity-btn:hover {
-    background-color: #e64a19;
+    background-color: #e65c00; /* Rojo más oscuro en hover */
     transform: scale(1.1);
 }
 
@@ -402,10 +404,10 @@ button:hover {
 }
 
 .add-to-cart-button {
-    background-color: #ff9800;
+    background-color: #ff6600; /* Rojo similar al de "Comprar ahora" */
     color: white;
     border: none;
-    padding: 10px 15px; /* Botón más corto */
+    padding: 10px 15px;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 15px;
@@ -415,11 +417,44 @@ button:hover {
     gap: 5px;
     transition: 0.2s ease-in-out;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    width: 180px; /* Ajusta el ancho para hacerlo más compacto */
-    margin: 0 auto; /* Centra el botón */
+    width: 180px;
+    margin: 0 auto;
 }
 
 .add-to-cart-button:hover {
-    background-color: #e68900;
+    background-color: #e65c00; /* Rojo más oscuro en hover */
     transform: scale(1.05);
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #333; /* Fondo oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer .footer-links a {
+    color: #ff6600; /* Color que coincide con los botones */
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 24px;
+    height: 24px;
 }

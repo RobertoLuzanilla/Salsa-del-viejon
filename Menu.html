@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="images/Logo.webp">
     <!-- Aquí llamamos al archivo CSS externo -->
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="Inicio">
         <img src="images/Foto1.jpg" alt="Salsas El Viejón" class="hero-img">
         <div class="hero-content">
             <h1>¡Sabor auténtico en cada gota!</h1>
@@ -54,7 +55,6 @@
                 </ul>
                 <p>Prueba nuestras salsas y lleva a casa el auténtico sabor del norte.</p>
 
-                <!-- Contenedor de botones para agregar al carrito -->
                 <div class="cart-controls">
                     <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
                     <span id="product-quantity">1</span>
@@ -75,37 +75,10 @@
         }
     </script>
 
-
-
-    <section class="contact" id="Contacto">
-        <div class="form">
-            <form action="DatosFomulario" method="post">
-                <h2>Contáctanos</h2>
-                <ul>
-                    <li>
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="user_name" />
-                    </li>
-                    <li>
-                        <label for="mail">Correo:</label>
-                        <input type="email" id="mail" name="user_mail" />
-                    </li>
-                    <li>
-                        <label for="msg">Mensaje</label>
-                        <textarea name="msg" id="user_message"></textarea>
-                    </li>
-                    <li class="button">
-                        <button type="submit">Envíe su mensaje</button>
-                    </li>
-                </ul>
-            </form>
-        </div>
-    </section>
-
     <section class="about-us" id="QuienesSomos">
         <h2>¿Quiénes Somos?</h2>
         <div class="about-content">
-            <img src="images/equipo.webp" alt="Equipo Salsas El Viejón" class="about-img">
+            <img src="images/Foto4.webp" alt="Equipo Salsas El Viejón" class="about-img">
             <div class="about-text">
                 <p>México es un país con una gran diversidad cultural, de ecosistemas, pero sobre todo de comida. Hay
                     miles de tipos de tacos, miles de tipos de salsas, miles de tipos de condimentos que en cada parte
@@ -132,6 +105,54 @@
             </div>
         </div>
     </section>
+
+    <section class="contact" id="Contacto">
+        <div class="form">
+            <form action="DatosFomulario" method="post">
+                <h2>Contáctanos</h2>
+                <ul>
+                    <li>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">Correo:</label>
+                        <input type="email" id="mail" name="user_mail" />
+                    </li>
+                    <li>
+                        <label for="msg">Mensaje</label>
+                        <textarea name="msg" id="user_message"></textarea>
+                    </li>
+                    <li class="button">
+                        <button type="submit">Envíe su mensaje</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Del Viejon. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de privacidad</a> | 
+                <a href="#">Términos de servicio</a> | 
+                <a href="#">Contacto</a>
+            </div>
+            <div class="social-media">
+                <!-- Usando Font Awesome -->
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <!-- O usando imágenes -->
+                <!-- <a href="https://www.facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a> -->
+                <!-- <a href="https://www.twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a> -->
+                <!-- <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a> -->
+            </div>
+        </div>
+    </footer>
+    
+
 </body>
 
 </html>
